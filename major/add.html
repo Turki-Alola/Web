@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Add Data</title>
+    </head>
+    <script type="text/javascript">
+function validateForm() {
+    var regex = /[^a-z0-9@.]/gi;
+    document.getElementById("firstname").value = document.getElementById("firstname").value.replace(regex,"");
+    document.getElementById("lastname").value = document.getElementById("lastname").value.replace(regex,"");
+    document.getElementById("email").value = document.getElementById("email").value.replace(regex,"");
+    }
+    </script>
+    <body>
+        <a href="index.php">Home</a>
+        <br/><br/>
+        
+        <form action="addmyinfo.php" method="post" name="form1" autocomplete="off">
+            <table width="25%" border="0">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="firstname" name="fname"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" id="lastname" name="lname"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="Submit" value="Add" onclick=""></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
